@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TJBC</title>
+    <title>Tianjin Brony Con - 主页</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#"><img src="img/logo.webp" alt="Logo"></a>
+                <a href="index.html"><img src="img/logo.webp" alt="Logo"></a>
             </div>
             <div class="hamburger">
                 <span></span>
@@ -23,6 +23,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="#about" class="nav-link">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#venue" class="nav-link">场地信息</a>
                 </li>
             </ul>
         </div>
@@ -37,35 +40,46 @@
 
     <section class="info-section" id="about">
         <div class="container">
-            <h2 class="info-title">关于我们</h2>
+            <h2 class="title">关于</h2>
+            <p class="subtitle">About</p>
             <p class="info-text">
                 这里是TJBC……
             </p>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="clock-markers">
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-            <div class="clock-marker"></div>
-        </div>
-        <div class="clock-hands">
-            <div class="clock-hand hour-hand"></div>
-            <div class="clock-hand minute-hand"></div>
-            <div class="clock-hand second-hand"></div>
-        </div>
+    <section class="venue-section" id="venue">
         <div class="container">
-            <p>&copy;TJBC All Rights Reserved.</p>
+            <h2 class="title">场地</h2>
+            <p class="subtitle">Venue</p>
+            <div class="venue-content">
+                <div class="venue-image">
+                    <img src="img/venue.png">
+                </div>
+                <div class="venue-info">
+                    <h3 class="venue-name">维也纳国际酒店<span>（天津奥体中心凌奥店）</span></h3>
+                    <p class="venue-address">地址：天津市南开区凌奥创意产业园</p>
+                    <p class="venue-description">非常好酒店，使我的钱包旋转</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="img/logo.webp" alt="TJBC Logo"></a>
+                </div>
+                <p class="copyright"><a href="https://github.com/TianJinBronyCon/TJBC_Web">&copy; Tianjin Brony Con</a><br>
+                该网站的源代码已使用 MIT 许可证开放</p>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-links">
+                    <li><a target="_blank" href="https://csbronycarnival.com/">CSBC华南马聚</a></li>
+                    <li><a target="_blank" href="https://ncbronyconvention.top/">DLC(NCBC)逐梦之地</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 

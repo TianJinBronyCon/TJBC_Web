@@ -1,13 +1,15 @@
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
+
+function handleScroll() {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-});
+}
 
-// 汉堡菜单功能
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -18,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
             navMenu.classList.toggle('active');
         });
         
-        // 点击菜单项时关闭菜单
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function() {
@@ -27,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // 点击页面其他区域时关闭菜单
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navMenu.contains(event.target) || hamburger.contains(event.target);
             if (!isClickInsideNav && navMenu.classList.contains('active')) {
