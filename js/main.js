@@ -6,7 +6,7 @@ function handleScroll() {
         navbar.classList.remove('scrolled');
     }
     
-    const sections = document.querySelectorAll('.info-section, .venue-section');
+    const sections = document.querySelectorAll('.info-section, .venue-section, .activities-section');
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
@@ -44,14 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // 关闭移动端菜单
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
                 
-                // 获取目标ID
                 const targetId = this.getAttribute('href');
                 
-                // 如果是首页链接，直接滚动到顶部
                 if (targetId === '#') {
                     e.preventDefault();
                     window.scrollTo({
@@ -61,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
                 
-                // 如果是锚点链接，实现平滑滚动
                 if (targetId.startsWith('#')) {
                     e.preventDefault();
                     const targetElement = document.querySelector(targetId);
@@ -87,4 +83,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    const activityTabs = document.querySelectorAll('.activity-tab');
+    const activityItems = document.querySelectorAll('.activity-item');
+    
+    activityTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const activityId = this.getAttribute('data-activity');
+            
+            activityTabs.forEach(t => t.classList.remove('active'));
+            activityItems.forEach(item => item.classList.remove('active'));
+            
+            this.classList.add('active');
+            document.getElementById(`activity-${activityId}`).classList.add('active');
+        });
+    });
 });
