@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: siyuansong, sans-serif;
     line-height: 1.6;
@@ -45,10 +49,6 @@ body {
     color: #333;
 }
 
-.navbar.scrolled .nav-link:hover {
-    color: #ff9e2f;
-}
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -80,8 +80,11 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #ff9e2f;
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active,
+.nav-link:hover,
+.nav-link.active {
+    color: #fc931b;
 }
 
 .hamburger {
@@ -236,7 +239,7 @@ body {
 }
 
 .footer {
-    background-color: #ffe5d2;
+    background-color: #ffebdd;
     color: #000;
     padding: 2rem 0;
     position: relative;
@@ -305,7 +308,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: rgb(66, 45, 0);
+    color: #9e5f00;
 }
 
 @media (max-width: 768px) {
