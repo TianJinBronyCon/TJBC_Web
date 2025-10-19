@@ -8,6 +8,17 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    font-family: siyuansong, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+@font-face {
+    font-family: siyuansong;
+    src: url('../fonts/SourceHanSerifCN-Bold-2-fix.otf');
+}
+
 .error-description {
     margin-top: 2rem;
     text-align: center;
@@ -64,17 +75,6 @@ html {
 
 .loader-image {
     max-width: 100px;
-}
-
-body {
-    font-family: siyuansong, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-@font-face {
-    font-family: siyuansong;
-    src: url('../fonts/SourceHanSerifCN-Bold-2-fix.otf');
 }
 
 .container {
@@ -136,6 +136,10 @@ body {
     color: #ffffff;
     font-weight: 500;
     transition: color 0.3s ease;
+}
+
+.nav-link.black {
+    color: #333;
 }
 
 .navbar.scrolled .nav-link:hover,
