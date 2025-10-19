@@ -8,6 +8,37 @@ html {
     scroll-behavior: smooth;
 }
 
+.error-description {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.error-description p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fc931b;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #e88518;
+}
+
+.error-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
 .loader-wrapper {
     position: fixed;
     top: 0;
@@ -168,6 +199,16 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
+}
+
+.hero-404-section {
+    height: 100vh;
+    background-blend-mode: overlay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(53, 53, 53);
 }
 
 .hero-content h1 {
@@ -562,5 +603,18 @@ body {
     
     .activity-title {
         font-size: 1.5rem;
+    }
+    
+    /* 404页面移动端样式 */
+    .error-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
     }
 }
