@@ -34,6 +34,13 @@ window.addEventListener('load', handleScroll);
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const loaderWrapper = document.querySelector('.loader-wrapper');
+    
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            loaderWrapper.classList.add('fade-out');
+        }, 500);
+    });
     
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', function() {
