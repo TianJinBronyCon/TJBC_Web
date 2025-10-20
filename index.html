@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <title>Tianjin Brony Con - 主页</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
     <div class="loader-wrapper">
         <div class="loader-content">
@@ -36,6 +38,12 @@
                 </li>
                 <li class="nav-item">
                     <a href="#activities" class="nav-link">活动</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tickets" class="nav-link">票价</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#qa" class="nav-link">常见问题</a>
                 </li>
             </ul>
         </div>
@@ -79,13 +87,13 @@
         <div class="container">
             <h2 class="title">活动</h2>
             <p class="subtitle">Events</p>
-            
+
             <div class="activity-tabs">
                 <button class="activity-tab active" data-activity="1">活动1</button>
                 <button class="activity-tab" data-activity="2">活动2</button>
                 <button class="activity-tab" data-activity="3">活动3</button>
             </div>
-            
+
             <div class="activity-content">
                 <div class="activity-item active" id="activity-1">
                     <div class="activity-image">
@@ -99,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="activity-item" id="activity-2">
                     <div class="activity-image">
                         <img src="img/sample.png">
@@ -112,7 +120,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="activity-item" id="activity-3">
                     <div class="activity-image">
                         <img src="img/sample.png">
@@ -129,14 +137,137 @@
         </div>
     </section>
 
+    <section class="tickets-section" id="tickets">
+        <div class="container">
+            <h2 class="title">票价</h2>
+            <p class="subtitle">Tickets</p>
+
+            <div class="tickets-container">
+                <div class="ticket-card standard">
+                    <div class="ticket-header">
+                        <h3 class="ticket-title">普通票</h3>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="ticket-price">
+                            <span class="price">¥91</span>
+                            <span class="period">/人</span>
+                        </div>
+                        <ul class="ticket-includes">
+                            <li>展会门票</li>
+                            <li>展会挂牌</li>
+                            <li>主题场刊</li>
+                            <li>主题袋子</li>
+                            <li>吉祥物吧唧</li>
+                            <li>吉祥物钥匙扣</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ticket-card welfare">
+                    <div class="ticket-header">
+                        <h3 class="ticket-title">福利票</h3>
+                        <div class="welfare-badge">吧友特惠！</div>
+                    </div>
+                    <div class="ticket-body">
+                        <div class="welfare-tabs">
+                            <button class="welfare-tab active" data-type="10">10级</button>
+                            <button class="welfare-tab" data-type="11-12">11-12级</button>
+                            <button class="welfare-tab" data-type="13+">13级以上</button>
+                        </div>
+
+                        <div class="welfare-content active" data-type="10">
+                            <div class="ticket-price">
+                                <span class="price">¥81</span>
+                                <span class="period">/人</span>
+                                <span class="original-price">¥91</span>
+                            </div>
+                            <p class="welfare-conditions">适用于：</p>
+                            <ul class="ticket-includes welfare-list">
+                                <li>小马宝莉吧10级的吧友</li>
+                            </ul>
+                        </div>
+
+                        <div class="welfare-content" data-type="11-12">
+                            <div class="ticket-price">
+                                <span class="price">¥71</span>
+                                <span class="period">/人</span>
+                                <span class="original-price">¥91</span>
+                            </div>
+                            <p class="welfare-conditions">适用于：</p>
+                            <ul class="ticket-includes welfare-list">
+                                <li>小马宝莉吧11-12级的吧友</li>
+                            </ul>
+                        </div>
+
+                        <div class="welfare-content" data-type="13+">
+                            <div class="ticket-price">
+                                <span class="price">免票!</span>
+                                <span class="original-price">¥91</span>
+                            </div>
+                            <p class="welfare-conditions">适用于：</p>
+                            <ul class="ticket-includes welfare-list">
+                                <li>小马宝莉吧13级以上的吧友</li>
+                            </ul>
+                        </div>
+
+                        <ul class="ticket-includes">
+                            <li>普通票的所有权益</li>
+                            <li>马吧专属吧唧</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qa-section" id="qa">
+        <div class="container">
+            <h2 class="title">常见问题</h2>
+            <p class="subtitle">FAQ</p>
+
+            <div class="qa-container">
+                <div class="qa-item">
+                    <div class="qa-question">
+                        <h3>问题1</h3>
+                        <div class="qa-icon">+</div>
+                    </div>
+                    <div class="qa-answer">
+                        <p>回答1</p>
+                    </div>
+                </div>
+
+                <div class="qa-item">
+                    <div class="qa-question">
+                        <h3>问题2</h3>
+                        <div class="qa-icon">+</div>
+                    </div>
+                    <div class="qa-answer">
+                        <p>回答2</p>
+                    </div>
+                </div>
+
+                <div class="qa-item">
+                    <div class="qa-question">
+                        <h3>问题3</h3>
+                        <div class="qa-icon">+</div>
+                    </div>
+                    <div class="qa-answer">
+                        <p>回答3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-left">
                 <div class="footer-logo">
                     <a href="index.html"><img src="img/logo.webp" alt="TJBC Logo"></a>
                 </div>
-                <p class="copyright"><a href="https://github.com/TianJinBronyCon/TJBC_Web">&copy; Tianjin Brony Con</a><br>
-                该网站的源代码已使用 MIT 许可证开放</p>
+                <p class="copyright"><a href="https://github.com/TianJinBronyCon/TJBC_Web">&copy; Tianjin Brony
+                        Con</a><br>
+                    该网站的源代码已使用 MIT 许可证开放</p>
             </div>
             <div class="footer-right">
                 <ul class="footer-links">
@@ -149,4 +280,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

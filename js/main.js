@@ -5,8 +5,8 @@ function handleScroll() {
     } else {
         navbar.classList.remove('scrolled');
     }
-    
-    const sections = document.querySelectorAll('.info-section, .venue-section, .activities-section');
+   // 获取所有需要检测的板块
+    const sections = document.querySelectorAll('.info-section, .venue-section, .activities-section, .tickets-section, .qa-section');
     const navLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
@@ -105,4 +105,45 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(`activity-${activityId}`).classList.add('active');
         });
     });
+    
+    initWelfareTabs();
+    
+    // 初始化QA手风琴
+    initQA();
 });
+
+function initWelfareTabs() {
+    const tabs = document.querySelectorAll('.welfare-tab');
+    const contents = document.querySelectorAll('.welfare-content');
+    
+    if (tabs.length > 0) {
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                this.classList.add('active');
+                
+                const type = this.getAttribute('data-type');
+                const content = document.querySelector(`.welfare-content[data-type="${type}"]`);
+                if (content) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    }
+}
+
+function initQA() {
+    const qaItems = document.querySelectorAll('.qa-item');
+    
+    if (qaItems.length > 0) {
+        qaItems.forEach(item => {
+            const question = item.querySelector('.qa-question');
+            
+            question.addEventListener('click', function() {
+                item.classList.toggle('active');
+            });
+        });
+    }
+}

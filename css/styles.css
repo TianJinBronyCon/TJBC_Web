@@ -405,6 +405,249 @@ body {
     color: #555;
 }
 
+.qa-section {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.qa-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.qa-item {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.qa-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.qa-question:hover {
+    background-color: rgba(252, 147, 27, 0.05);
+}
+
+.qa-question h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.qa-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fc931b;
+    transition: transform 0.3s ease;
+}
+
+.qa-answer {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.qa-answer p {
+    margin: 0;
+    padding: 1.5rem 0;
+    line-height: 1.6;
+    color: #666;
+}
+
+.qa-item.active .qa-icon {
+    transform: rotate(45deg);
+}
+
+.qa-item.active .qa-answer {
+    max-height: 500px;
+}
+
+@media (max-width: 768px) {
+    .qa-section {
+        padding: 3rem 0;
+    }
+    
+    .qa-question {
+        padding: 1.2rem;
+    }
+    
+    .qa-question h3 {
+        font-size: 1rem;
+    }
+    
+    .qa-answer p {
+        padding: 1.2rem 0;
+    }
+}
+
+.tickets-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.ticket-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    padding: 2rem;
+    position: relative;
+}
+
+.ticket-card.welfare {
+    border-color: #9e5f00;
+    background-color: #fff9f0;
+}
+
+.ticket-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.ticket-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0;
+}
+
+.welfare-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #9e5f00;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.ticket-body {
+    text-align: center;
+}
+
+.ticket-price {
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.ticket-card.welfare .price {
+    color: #9e5f00;
+}
+
+.period {
+    font-size: 1rem;
+    color: #666;
+    margin-left: 5px;
+}
+
+.original-price {
+    position: absolute;
+    top: -10px;
+    right: -60px;
+    font-size: 1rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.welfare-conditions {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    text-align: left;
+}
+
+.ticket-includes {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.ticket-includes li {
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ticket-includes li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #9e5f00;
+    font-weight: bold;
+}
+
+.welfare-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.welfare-tab {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid #9e5f00;
+    color: #9e5f00;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.welfare-tab:hover {
+    background-color: rgba(252, 147, 27, 0.1);
+}
+
+.welfare-tab.active {
+    background-color: #9e5f00;
+    color: white;
+}
+
+.welfare-content {
+    display: none;
+    margin-bottom: 1.5rem;
+}
+
+.welfare-content.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.welfare-list {
+    background-color: rgba(252, 147, 27, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+}
+
+.welfare-list li::before {
+    content: '•';
+    color: #9e5f00;
+}
+
 .activity-details strong {
     color: #333;
 }
@@ -608,8 +851,16 @@ body {
     .activity-title {
         font-size: 1.5rem;
     }
-    
-    /* 404页面移动端样式 */
+
+    .tickets-container {
+        gap: 2rem;
+    }
+
+    .ticket-card {
+        width: 100%;
+        max-width: none;
+    }
+
     .error-actions {
         flex-direction: column;
         align-items: center;
