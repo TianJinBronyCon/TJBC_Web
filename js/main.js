@@ -5,7 +5,7 @@ function handleScroll() {
     } else {
         navbar.classList.remove('scrolled');
     }
-   // 获取所有需要检测的板块
+    
     const sections = document.querySelectorAll('.info-section, .venue-section, .activities-section, .tickets-section, .qa-section');
     const navLinks = document.querySelectorAll('.nav-link');
     
