@@ -692,6 +692,7 @@ body {
 .copyright a {
     color: #000;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer-right {
@@ -721,6 +722,7 @@ body {
     transition: color 0.3s ease;
 }
 
+.copyright a:hover,
 .footer-links a:hover {
     color: #9e5f00;
 }
