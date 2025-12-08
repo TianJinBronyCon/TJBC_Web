@@ -105,6 +105,7 @@ body {
 
 .navbar.scrolled .nav-link {
     color: #333;
+    text-shadow: none;
 }
 
 .nav-container {
@@ -134,8 +135,9 @@ body {
 .nav-link {
     text-decoration: none;
     color: rgb(32, 24, 0);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .nav-link.black {
@@ -146,7 +148,7 @@ body {
 .navbar.scrolled .nav-link.active,
 .nav-link:hover,
 .nav-link.active {
-    color: #fc931b;
+    color: #ff8800;
 }
 
 .hamburger {
@@ -200,10 +202,10 @@ body {
     background-blend-mode: overlay;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-end;
-    text-align: right;
-    color: rgb(32, 24, 0);
+    justify-content: flex-start;
+    text-align: left;
     padding: 100px 2rem 2rem;
+    position: relative;
 }
 
 .hero-404-section {
@@ -217,22 +219,47 @@ body {
 }
 
 .hero-content {
-    margin-top: 50px;
-    margin-right: 30px;
+    margin-top: 10px;
+    margin-left: 35px;
+    color: rgb(32, 24, 0);
 }
 
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    text-align: right;
+    text-align: left;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-align: left;
+}
+
+.countdown {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    color: rgb(32, 24, 0);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.countdown-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
     text-align: right;
+}
+
+.countdown-timer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.countdown-days, .countdown-hours, .countdown-minutes, .countdown-seconds {
+    font-weight: bold;
 }
 
 .info-section {
@@ -780,12 +807,26 @@ body {
     
     .hero-content h1 {
         font-size: 2rem;
-        text-align: right;
+        text-align: left;
     }
     
     .hero-content p {
         font-size: 1rem;
-        text-align: right;
+        text-align: left;
+    }
+    
+    .countdown {
+        right: 1rem;
+        bottom: 1rem;
+        left: auto;
+    }
+    
+    .countdown-title {
+        font-size: 1rem;
+    }
+    
+    .countdown-timer {
+        font-size: 1.2rem;
     }
     
     .info-title {

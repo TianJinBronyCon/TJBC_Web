@@ -28,10 +28,37 @@ function handleScroll() {
     });
 }
 
+function updateCountdown() {
+    const targetDate = new Date('2026-02-01T00:00:00').getTime();
+    
+    const now = new Date().getTime();
+    
+    const timeRemaining = targetDate - now;
+    
+    if (timeRemaining < 0) {
+        document.querySelector('.countdown-title').textContent = '活动已开始';
+        document.querySelector('.countdown-timer').innerHTML = '';
+        return;
+    }
+    
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+    
+    document.querySelector('.countdown-days').textContent = days;
+    document.querySelector('.countdown-hours').textContent = hours;
+    document.querySelector('.countdown-minutes').textContent = minutes;
+    document.querySelector('.countdown-seconds').textContent = seconds;
+}
+
 window.addEventListener('scroll', handleScroll);
 window.addEventListener('load', handleScroll);
 
 document.addEventListener('DOMContentLoaded', function() {
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+    
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const loaderWrapper = document.querySelector('.loader-wrapper');
@@ -108,7 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initWelfareTabs();
     
-    // 初始化QA手风琴
     initQA();
 });
 
