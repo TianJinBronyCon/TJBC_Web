@@ -36,15 +36,22 @@ function handleScroll() {
 }
 
 function updateCountdown() {
+    const titleEl = document.querySelector('.countdown-title');
+    const timerEl = document.querySelector('.countdown-timer');
+    const daysEl  = document.querySelector('.countdown-days');
+    const hoursEl = document.querySelector('.countdown-hours');
+    const minsEl  = document.querySelector('.countdown-minutes');
+    const secsEl  = document.querySelector('.countdown-seconds');
+
+    if (!titleEl || !timerEl || !daysEl || !hoursEl || !minsEl || !secsEl) return;
+
     const targetDate = new Date('2026-02-01T00:00:00').getTime();
-
     const now = new Date().getTime();
-
     const timeRemaining = targetDate - now;
 
     if (timeRemaining < 0) {
-        document.querySelector('.countdown-title').textContent = '活动已开始';
-        document.querySelector('.countdown-timer').innerHTML = '';
+        titleEl.textContent = '活动已开始';
+        timerEl.innerHTML = '';
         return;
     }
 
@@ -53,10 +60,10 @@ function updateCountdown() {
     const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-    document.querySelector('.countdown-days').textContent = days;
-    document.querySelector('.countdown-hours').textContent = hours;
-    document.querySelector('.countdown-minutes').textContent = minutes;
-    document.querySelector('.countdown-seconds').textContent = seconds;
+    daysEl.textContent  = days;
+    hoursEl.textContent = hours;
+    minsEl.textContent  = minutes;
+    secsEl.textContent  = seconds;
 }
 
 window.addEventListener('scroll', handleScroll);
